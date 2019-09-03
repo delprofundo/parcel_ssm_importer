@@ -1,0 +1,15 @@
+{
+  "name": "parcel-plugin-ssm-env-setter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "delProfundo",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.521.0",
+    "parcel-bundler": "^1.12.3"
+  }
+}
