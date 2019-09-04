@@ -16,8 +16,8 @@ class SsmImportAsset extends Asset {
   }
 
   async generate( ) {
-    //const generated = await super.generate();
-    fs.mkdirSync(`${__dirname}/poop`);
+    const generated = await super.generate();
+    console.log( generated );
     console.log("inside the body of the thingamajig!");
 
     console.log( "REGUN : ", REGION );
