@@ -24,6 +24,6 @@ class SsmImportAsset extends Asset {
     console.log("key obj : ", paths[0])
 
   }
-
-
 }
+
+module.exports = SsmImportAsset;
