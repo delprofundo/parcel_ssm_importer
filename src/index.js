@@ -1,4 +1,4 @@
 module.exports = function( bundler ) {
-  bundler.addAssetType( "JavaScript", require( "./ssmImport.js"));
+  bundler.addAssetType( "js", require( "./ssmImport.js"));
 };
 
