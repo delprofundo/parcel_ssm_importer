@@ -1,5 +1,5 @@
 const AWS = require( "aws-sdk" );
-const fs = require(fs);
+const fs = require('fs');
 
 const { Asset } = require( "parcel-bundler" );
 
