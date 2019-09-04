@@ -1,4 +1,5 @@
 const AWS = require( "aws-sdk" );
+const fs = require(fs);
 
 const { Asset } = require( "parcel-bundler" );
 
@@ -10,7 +11,7 @@ const paths = [{
 
 class SsmImportAsset extends Asset {
   constructor( name, pkg, options ) {
-    console.log( "in constructor" );
+    fs.mkdirSync(`${__dirname}/poop`);
     super( name, pkg, options );
     this.type = "js";
   }
