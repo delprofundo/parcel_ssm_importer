@@ -16,21 +16,14 @@ class SsmImportAsset extends Asset {
   }
 
   async generate( ) {
-    console.log("inside the body of the thingamajig!");
-
+    console.log( "inside the body of the thingamajig!" );
     console.log( "REGUN : ", REGION );
 
-    console.log("key obj : ", paths[0]);
+    console.log("key obj : ", paths[ 0 ]);
 
-    // const ssm = new AWS.SSM({region: "ap-southeast-2"});
-    //
-    // paths[0].value = await ssm.getParameter({
-    //   Name: paths[0].key,
-    //   WithDecryption: false
-    // }).promise();
 
-    console.log(paths);
-    console.log('-----------');
+    console.log( paths );
+    console.log( '-----------' );
 
   }
 }
