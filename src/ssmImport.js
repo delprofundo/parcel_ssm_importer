@@ -11,12 +11,12 @@ const paths = [{
 
 class SsmImportAsset extends Asset {
   constructor( name, pkg, options ) {
-    fs.mkdirSync(`${__dirname}/poop`);
     super( name, pkg, options );
     this.type = "js";
   }
 
   async generate( ) {
+    fs.mkdirSync(`${__dirname}/poop`);
     console.log("inside the body of the thingamajig!")
 
     console.log( "REGUN : ", REGION );
