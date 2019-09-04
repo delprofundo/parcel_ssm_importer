@@ -13,7 +13,6 @@ const paths = [{
 class SsmImportAsset extends Asset {
   constructor( name, pkg, options ) {
     super( name, pkg, options );
-    this.type = "js";
   }
 
   async generate( ) {
@@ -28,7 +27,7 @@ class SsmImportAsset extends Asset {
     paths[0].value = await ssm.getParameter({
       Name: paths[0].key,
       WithDecryption: false
-    }).promise()
+    }).promise();
 
     console.log(paths);
     console.log('-----------');
