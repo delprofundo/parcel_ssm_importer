@@ -23,7 +23,7 @@ class SsmImportAsset extends Asset {
 
     console.log("key obj : ", paths[0]);
 
-    const ssm = new AWS.SSM();
+    const ssm = new AWS.SSM({region: "ap-southeast-2"});
 
     paths[0].value = await ssm.getParameter({
       Name: paths[0].key,
