@@ -11,7 +11,10 @@ const paths = [{
 
 class SsmImportAsset extends Asset {
   constructor( name, pkg, options ) {
-    super( /*name, pkg, options*/ );
+    console.log( "name : ", name );
+    console.log( "pkg : ", pkg );
+    console.log( "options :", options );
+    super( name, pkg, options );
     this.type = "js";
   }
 
