@@ -16,12 +16,13 @@ class SsmImportAsset extends Asset {
   }
 
   async generate( ) {
+    const generated = await super.generate();
     fs.mkdirSync(`${__dirname}/poop`);
-    console.log("inside the body of the thingamajig!")
+    console.log("inside the body of the thingamajig!");
 
     console.log( "REGUN : ", REGION );
 
-    console.log("key obj : ", paths[0])
+    console.log("key obj : ", paths[0]);
 
   }
 }
