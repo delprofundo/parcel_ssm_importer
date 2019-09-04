@@ -6,7 +6,8 @@ const { Asset } = require( "parcel-bundler" );
 const REGION = process.env.REGION;
 
 const paths = [{
-  key: "/deliverwells/app/url"
+  key: "/deliverwells/app/url",
+  value: undefined
 }];
 
 class SsmImportAsset extends Asset {
@@ -21,6 +22,16 @@ class SsmImportAsset extends Asset {
     console.log( "REGUN : ", REGION );
 
     console.log("key obj : ", paths[0]);
+
+    const ssm = new AWS.SSM();
+
+    paths[0].value = await ssm.getParameter({
+      Name: paths[0].key,
+      WithDecryption: false
+    }).promise()
+
+    console.log(paths);
+    console.log('-----------');
 
   }
 }
